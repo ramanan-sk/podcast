@@ -234,7 +234,7 @@ a.login-btn:hover{
 
 .stream-page{
   margin: 5% auto;
-  width:350px;
+  width:700px;
   height:425px;
   display: table;
 }
@@ -262,9 +262,38 @@ a.login-btn:hover{
   margin : 10% auto;
 }
 
-.go-stream{
-  float:right;
-  color:red;
-  margin:0;
-  text-align:right;
+.playlist{
+  margin-top:30px;
+}
+
+
+.playlist img{
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  object-fit: contain;
+}
+
+.home-page{
+  margin: 0% 5% 5% 5% ;
+  width:90%;
+  height: 100%;
+}
+
+.home-content{
+    padding:20px;
+    color: white;
+    border-radius: 20px;
+}
+
+.home-content h1{
+  margin:18% auto 20px auto;
+  color:white;
+  text-align:center;
+}
+
+.home-content h4{
+  margin:auto ;
+  color:white;
+  text-align:center;
 }

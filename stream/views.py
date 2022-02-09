@@ -63,9 +63,26 @@ def userlogout(request):
     return redirect('/')
 
 def podstream(request, room_name):
-    return render(request, 'stream.html', {
-        'room_name': room_name
-    })
+    playlist = User.objects.filter(channel_name=room_name)
+    for play in playlist:
+        l = play.playlist.split('|')
+        print(play)
+        return render(request, 'stream.html', {
+            'room_name': room_name,
+            'playlist' : l,
+            'audio_no':l[0]
+        })
+
+def podstreamredirect(request, room_name,audio_name):
+    playlist = User.objects.filter(channel_name=room_name)
+    for play in playlist:
+        l = play.playlist.split('|')
+        print(play)
+        return render(request, 'stream.html', {
+            'room_name': room_name,
+            'playlist' : l,
+            'audio_no':audio_name
+        })
 
 def podstudio(request,user_name):
     if(request.user.username == user_name):

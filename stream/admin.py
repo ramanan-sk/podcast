@@ -8,7 +8,7 @@ from .models import CustomUser
 class CustomUserAdmin(UserAdmin):
     list_display = (
         'username', 'email', 'first_name', 'last_name', 'is_staff',
-        'channel_name','followers','streamer','live','follows'
+        'channel_name','followers','streamer','live','follows','playlist'
         )
 
     fieldsets = (
@@ -28,7 +28,7 @@ class CustomUserAdmin(UserAdmin):
             'fields': ('last_login', 'date_joined')
         }),
         ('Channel info', {
-            'fields': ('channel_name','followers','streamer','live','follows')
+            'fields': ('channel_name','followers','streamer','live','follows','playlist')
         })
     )
 
@@ -49,7 +49,7 @@ class CustomUserAdmin(UserAdmin):
             'fields': ('last_login', 'date_joined')
         }),
         ('Channel info', {
-            'fields': ('channel_name','followers','streamer','live','follows')
+            'fields': ('channel_name','followers','streamer','live','follows','playlist')
         })
     )
 
